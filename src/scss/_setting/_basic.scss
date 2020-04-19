@@ -1,0 +1,30 @@
+*,*::before,
+*,*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Museo Sans Cyrl', Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
