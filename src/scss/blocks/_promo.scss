@@ -1,0 +1,124 @@
+.promo {
+  text-align: right;
+  padding-bottom: 90px;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.promo__big-title {
+  font-size: 42px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+
+  @include phones {
+    font-size: 23px;
+  }
+}
+
+.promo__small-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.promo-block__item {
+  width: 108px;
+  margin-right: 65px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include phones {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    &:last-child {
+      margin: 0 auto;
+    }
+  }
+}
+
+.promo-block__img {
+  width: 42px;
+  height: 46px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.promo-block__img--time {
+  background-image: url(../img/sprite.png);
+  background-position: -190px 0px;
+}
+
+.promo-block__img--delivery {
+  background-image: url(../img/sprite.png);
+  background-position: -95px -95px;
+}
+
+.promo-block__img--comments {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -181px;
+}
+
+.promo-block__text {
+  text-align: center;
+}
+
+.promo-block-wrap {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  margin-top: 70px;
+
+  @include phones {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.promo__button {
+  margin-left: auto;
+  margin-bottom: 17px;
+  font-size: 16px;
+  padding: 16px 42px;
+
+  @include small-phones {
+    font-size: 14px;
+  }
+}
+
+.promo__block-link p {
+  display: inline;
+}
+
+.promo__link {
+  font-size: 16px;
+  color: $white;
+  border-bottom: 1px solid $white;
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  &:hover {
+    color: $darker;
+    border-bottom: 1px solid $darker;
+    transition: 0.3s;
+  }
+
+  &:active {
+    color: $lighter;
+    border-bottom: 1px solid $lighter;
+  }
+}

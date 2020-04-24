@@ -1,0 +1,72 @@
+.feedback {
+  background: $white;
+  color: $black;
+}
+
+.feedback-row {
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-row-wrap {
+  width: 650px;
+  text-align: center;
+
+  @media (max-width: 665px) {
+    width: 400px;
+  }
+
+  @include phones {
+    width: 300px;
+  }
+}
+
+.feedback__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #f6f6f6;
+  min-height: 480px;
+}
+
+.feedback__title {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: $museo;
+  font-weight: 400;
+  margin-bottom: 70px;
+
+  @include phones {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.feedback__item-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+.feedback__item-name {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: $museo;
+  margin-bottom: 10px;
+}
+
+.feedback__item-amount {
+  font-size: 14px;
+  color: $gray;
+  margin-bottom: 20px;
+}
+
+.feedback__item-text {
+  font-size: 16px;
+
+  & p {
+    padding-bottom: 25px;
+  }
+}

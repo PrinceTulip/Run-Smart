@@ -1,0 +1,44 @@
+.consultation-row {
+  flex-direction: column;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.consultation {
+  background: url("../img/cons-bg.png") no-repeat center/cover;
+  padding: 90px 0 90px 0;
+
+  @include phones {
+    padding: 50px 0 90px 0;
+  }
+
+}
+
+.consultation__title {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: $museo;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+
+  @include phones {
+    font-size: 22px;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}
+
+.consultation__text {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: $museo;
+  margin-bottom: 34px;
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+

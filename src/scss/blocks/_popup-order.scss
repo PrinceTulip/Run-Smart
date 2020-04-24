@@ -1,0 +1,31 @@
+.popup-order {
+  display: none;
+  position: fixed;
+  padding: 40px 80px;
+  width: 380px;
+  top: 565px;
+  left: 50%;
+  margin-left: -250px;
+  z-index: 30;
+  color: $black;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.popup-order__title {
+  font-size: 19px;
+  font-weight: 400;
+  font-family: $museo;
+  margin-bottom: 15px;
+}
+
+.popup-order__text {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $museo;
+
+}
+
+.popup-order-show {
+  display: block;
+}

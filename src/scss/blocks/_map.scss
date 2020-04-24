@@ -1,0 +1,6 @@
+.map {
+  height: 630px;
+  @include tablets {
+    height: 330px;
+  }
+}

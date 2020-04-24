@@ -1,0 +1,37 @@
+.modal-form__input {
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 300px;
+
+  @include phones {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  @include placeholder {
+    color: $black;
+    text-overflow:ellipsis;
+  }
+
+  &:focus {
+    @include placeholder {
+      color: transparent; transition: 0.4s ease
+    }
+  }
+
+}
+
+.modal__btn {
+  font-size: 16px;
+  padding: 16px 42px;
+
+  @include phones {
+    font-size: 14px;
+    width: 85%;
+  }
+}

@@ -1,0 +1,152 @@
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 0.4s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 0.7s;
+}
+
+.slider-row {
+  justify-content: center;
+}
+
+.slider__item {
+  position: relative;
+  min-height: 590px;
+
+  @include tablets {
+    text-align: center;
+    min-height: 375px;
+  }
+
+  @include phones {
+    text-align: center;
+    min-height: 175px;
+  }
+}
+
+.slider-wrap {
+  position: relative;
+  text-align: center;
+}
+
+.slider button {
+  position: absolute;
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  border-color: $red;
+  top: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 20;
+
+  @include laptop {
+    top: 85%;
+  }
+
+  @include tablets {
+    top: 27%;
+  }
+
+  @include phones {
+    top: 31%;
+  }
+}
+
+.slider__prevSelector {
+  border-bottom: 7px solid;
+  border-left: 7px solid;
+  transform: rotate(45deg);
+  border-right: 0;
+  border-top: 0;
+  border-radius: 5px;
+  background: transparent;
+  left: -100px;
+
+  @include laptop{
+    left: 150px;
+  }
+
+  @include tablets {
+    left: 35px;
+    border-bottom: 7px solid;
+    border-left: 7px solid;
+
+  }
+
+  @include phones {
+    left: 10px;
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+  }
+
+}
+
+.slider__nextSelector {
+  border-top: 7px solid;
+  border-left: 0;
+  border-right: 7px solid;
+  border-bottom: 0;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  right: -100px;
+  background: transparent;
+
+  @include laptop {
+    right: 150px;
+  }
+
+  @include tablets {
+    right: 35px;
+    border-top: 7px solid;
+    border-right: 7px solid;
+
+  }
+
+  @include phones {
+    right: 10px;
+    border-top: 4px solid;
+    border-right: 4px solid;
+  }
+}
+
+.slider-block {
+
+  & img {
+    margin: 0 auto;
+    
+    @include laptop{
+      max-width: 85%;
+      margin: 0 auto;
+    }
+    
+
+    @include tablets {
+      max-width: 65%;
+    }
+  }
+}
+
+.slider-block {
+  padding: 80px 0 80px 0;
+  background: $white;
+}
+
+
+
+

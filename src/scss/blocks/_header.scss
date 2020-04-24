@@ -1,0 +1,81 @@
+.wrap {
+  background: url("../img/wrapper-bg.png") no-repeat center/cover;
+}
+
+.header {
+  padding-top: 10px;
+  margin-bottom: 90px;
+
+  @include phones {
+    margin-bottom: 50px;
+    padding-top: 30px;
+  }
+}
+
+.header__logo  {
+
+  @include phones {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+}
+
+.header-row {
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    display: block;
+  }
+}
+
+.header__author {
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+}
+
+.header__author-name {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header__author-amount {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.header__contacts  {
+
+  @include phones {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+
+
+  & p {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    @include phones {
+      font-size: 16px;
+    }
+  }
+
+}
+
+.header__btn {
+  font-size: 14px;
+}

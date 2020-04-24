@@ -1,0 +1,107 @@
+.features-row {
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include phones {
+    flex-direction: column;
+  }
+
+  @media (max-width: 550px){
+    flex-direction: column;
+  }
+}
+
+.features {
+  background-color: #f6f6f6;
+  color: $black;
+  text-align: center;
+  padding: 67px 0 80px 0;
+}
+
+.features__item {
+  margin-bottom: 20px;
+  width: calc(33.3% - 20px);
+  margin-right: 20px;
+
+  @include phones {
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 550px) {
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+
+    @include phones {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 550px){
+      margin: 0 auto;
+    }
+
+    margin-right: 0;
+  }
+
+}
+
+.features__title {
+  margin-bottom: 70px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: $museo;
+
+  @include phones {
+    font-size: 24px;
+  }
+}
+
+.features__img {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  background-image: url(../img/sprite.png);
+  margin-bottom: 30px;
+}
+
+.features__img--exp {
+  background-position: 0 0;
+}
+
+.features__img--health {
+  background-position: -95px 0px;
+}
+
+.features__img--shoe {
+  background-position: 0 -95px;
+}
+
+.features__item-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-family: $museo;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.features__item-text {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $museo;
+}
+
+.features__link {
+
+  &:hover {
+    border: none;
+  }
+
+}

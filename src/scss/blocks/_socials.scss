@@ -1,0 +1,99 @@
+.map-wrapper {
+  position: relative;
+}
+
+.socials {
+  position: absolute;
+  top: 0;
+  left: 37%;
+  background: $red;
+  padding: 50px 65px;
+
+  @include laptop {
+    padding: 40px 30px;
+    position: static;
+    width: 100%;
+  }
+
+  @include tablets {
+    padding: 40px 30px;
+    position: static;
+    width: 100%;
+    margin-top: 300px;
+  }
+}
+
+.socials__information {
+  text-align: center;
+
+  & p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: $museo;
+    font-weight: 400;
+
+    @include tablets {
+      font-size: 14px;
+    }
+  }
+
+}
+
+.socials-row {
+  justify-content: center;
+}
+
+.socials__list{
+  display: flex;
+}
+
+.socials__list-item {
+  display: block;
+  margin-right: 60px;
+
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.socials__list-link {
+  position: relative;
+  background: url("../img/sprite.png") no-repeat;
+  display: inline-block;
+  font-size: 0;
+  text-decoration: none;
+  width: 27px;
+  height: 27px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: -12px;
+    left: -12px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    transition: 0.5s;
+    border: transparent;
+  }
+
+
+  &--fb {
+    background-position: -65px -190px;
+  }
+
+  &--inst {
+    background-position: -190px -71px;
+  }
+
+  &--pin {
+    background-position: -187px -123px;
+  }
+}

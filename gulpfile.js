@@ -67,11 +67,11 @@ function svgSpriteBuild() {
 
 function styles() {
   return gulp.src(paths.src + 'scss/main.scss')
-      .pipe(plumber())
+      //.pipe(plumber())
       .pipe(sassGlob())
       .pipe(sass()) // { outputStyle: 'compressed' }
-      .pipe(autoprefixer())
-      .pipe(cleanCSS())
+      //.pipe(autoprefixer())
+      //.pipe(cleanCSS())
       .pipe(rename({ suffix: ".min" }))
       .pipe(gulp.dest(paths.build + 'css/'))
 }
@@ -82,9 +82,9 @@ return(
     .bundle()
     .pipe(source("bundle.js"))
     // Turn it into a buffer!
-    .pipe(buffer())
+    //.pipe(buffer())
     // And uglify
-    .pipe(uglify())
+    //.pipe(uglify())
   .pipe(gulp.dest(paths.build + 'js/'))
 )
 }
