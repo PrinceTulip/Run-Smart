@@ -37,7 +37,6 @@ const tabs = () => {
 };
 
 const slider = () => {
-
   function bindSlider(slidesSelector, prevSelector, nextSelector) {
     const slides = document.querySelectorAll(slidesSelector);
     const prev = document.querySelector(prevSelector);
@@ -148,17 +147,14 @@ for (let i = 0; i < link.length; i++) {
   });
 
 }
-;
+
 
 function closeAllPopup() {
   document.querySelectorAll('.popup-form').forEach(function (item) {
     item.classList.remove('popup-form-show')
-
-
   })
 
 }
-
 
 
 const requestData = async (url, data) => {
@@ -172,30 +168,34 @@ const requestData = async (url, data) => {
 
 function forms() {
   const form = document.querySelectorAll("form");
+  const overlay = document.querySelector(".popup-overlay")
 
   form.forEach((item) => {
+
     console.log(item);
+
     item.addEventListener('submit', (e) => {
       e.preventDefault()
-      console.log('1')
       const formdata = new FormData();
+
       requestData("urlvlad", formdata)
           .then(function (res) {
-
+            item.reset()
            closeAllPopup()
+
             order.classList.add("popup-order-show")
             overlay.classList.add("popup-overlay-show")
           })
-          .catch(function () {
-            alert("oshibka")
 
+          .catch(function () {
+            alert("вышел нахуй остюда")
+            overlay.classList.remove('popup-overlay-show')
           })
     })
   })
 }
 
 forms();
-
 
 
 close.addEventListener("click", function (event) {
@@ -220,6 +220,32 @@ window.addEventListener("click", function (e) {
     overlay.classList.remove("popup-overlay-show");
   }
 });
+
+try {
+  const WOW = require ('wow.js')
+
+  const wow = new WOW(
+      {
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,    // optional scroll container selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+      }
+  );
+
+  wow.init();
+
+} catch (e) {
+  
+}
+
 
 window.addEventListener('DOMContentLoaded', () => {
   slider();

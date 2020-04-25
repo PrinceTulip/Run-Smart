@@ -35,8 +35,9 @@ const config = {
 };
 
 const paths =  {
-  src: './src/',              // paths.src
+  src: './src/',               // paths.src
   build: './build/'           // paths.build
+  //build: '/programs/xamp/htdocs/test1/'
 };
 
 function svgSpriteBuild() {
@@ -111,9 +112,9 @@ function favicon() {
   return gulp.src(paths.src + 'favicon/*')
       .pipe(gulp.dest(paths.build + 'favicon'));
 }
-function fonts() {
-  return gulp.src(paths.src + 'fonts/**/*')
-      .pipe(gulp.dest(paths.build + 'fonts'));
+ function fonts() {
+ return gulp.src(paths.src + 'fonts/**/*')
+  .pipe(gulp.dest(paths.build + 'fonts'));
 }
 function clean() {
   return del('build/')
