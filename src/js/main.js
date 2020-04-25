@@ -156,7 +156,6 @@ function closeAllPopup() {
 
 }
 
-
 const requestData = async (url, data) => {
   const res = await fetch(url, {
     method: 'POST',
@@ -176,9 +175,10 @@ function forms() {
 
     item.addEventListener('submit', (e) => {
       e.preventDefault()
+      console.log(item)
       const formdata = new FormData();
 
-      requestData("urlvlad", formdata)
+      requestData("../php/server.php", formdata)
           .then(function (res) {
             item.reset()
            closeAllPopup()
@@ -195,7 +195,7 @@ function forms() {
   })
 }
 
-forms();
+forms()
 
 
 close.addEventListener("click", function (event) {

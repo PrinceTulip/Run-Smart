@@ -36,8 +36,8 @@ const config = {
 
 const paths =  {
   src: './src/',               // paths.src
-  build: './build/'           // paths.build
-  //build: '/programs/xamp/htdocs/test1/'
+  //build: './build/'           // paths.build
+  build: 'D:/xampp/htdocs/test/'
 };
 
 function svgSpriteBuild() {
@@ -116,6 +116,10 @@ function favicon() {
  return gulp.src(paths.src + 'fonts/**/*')
   .pipe(gulp.dest(paths.build + 'fonts'));
 }
+function php() {
+  return gulp.src(paths.src + 'php/**/*')
+      .pipe(gulp.dest(paths.build + 'php'));
+}
 function clean() {
   return del('build/')
 }
@@ -149,6 +153,7 @@ exports.favicon = favicon;
 exports.fonts = fonts;
 exports.svgSpriteBuild = svgSpriteBuild;
 exports.spritesPng = spritesPng;
+exports.php = php;
 
 
 gulp.task('build', gulp.series(
@@ -159,12 +164,13 @@ gulp.task('build', gulp.series(
     img,
     fonts,
     favicon,
-    spritesPng
+    spritesPng,
+    php
     // gulp.parallel(styles, scripts, htmls, img, fonts)
 ));
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, htmls, img, svgSpriteBuild, fonts, favicon,spritesPng),
+    gulp.parallel(styles, scripts, htmls, img, svgSpriteBuild, fonts, favicon,spritesPng,php),
     gulp.parallel(watch, serve)
 ));
